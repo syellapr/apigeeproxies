@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PopulateCache async="false" continueOnError="false" enabled="true" name="PopulateHolidayByCountryYear">
+    <DisplayName>PopulateHolidayByCountryYear</DisplayName>
+    <Properties/>
+    <CacheKey>
+        <Prefix>holiday</Prefix>
+        <KeyFragment>countryCode</KeyFragment>
+    </CacheKey>
+    <CacheResource>HolidayserviceCache</CacheResource>
+    <Scope>Exclusive</Scope>
+    <ExpirySettings>
+        <TimeoutInSec>3600</TimeoutInSec>
+    </ExpirySettings>
+    <Source>request.queryparam.countryCode</Source>
+</PopulateCache>

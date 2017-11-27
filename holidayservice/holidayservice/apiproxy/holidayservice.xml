@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="holidayservice">
+    <Basepaths>/holidayservice</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1493120084879</CreatedAt>
+    <CreatedBy>sailendra@yandex.com</CreatedBy>
+    <Description>A Holiday Listing Service for countries and Date Range</Description>
+    <DisplayName>holidayservice</DisplayName>
+    <LastModifiedAt>1493132245454</LastModifiedAt>
+    <LastModifiedBy>sailendra@yandex.com</LastModifiedBy>
+    <Policies>
+        <Policy>AssignMsgHolidayByCountryCode</Policy>
+        <Policy>AssignMsgHolidayByDateRange</Policy>
+        <Policy>AssignMsgHolidayByYear</Policy>
+        <Policy>ExtractCountryCode</Policy>
+        <Policy>ExtractHolidayDateRange</Policy>
+        <Policy>ExtractHolidayYear</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

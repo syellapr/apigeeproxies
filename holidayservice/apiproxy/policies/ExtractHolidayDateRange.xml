@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="true" enabled="true" name="ExtractHolidayDateRange">
+    <DisplayName>ExtractHolidayDateRange</DisplayName>
+    <Source clearPayload="false">request</Source>
+    <JSONPayload>
+        <Variable name="startDate">
+            <JSONPath>$.startDate</JSONPath>
+        </Variable>
+        <Variable name="endDate">
+            <JSONPath>$.endDate</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

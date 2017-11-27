@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="74" name="holidayservice">
+    <Basepaths>/holidayservice</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1511251674441</CreatedAt>
+    <CreatedBy>sailendra@yandex.com</CreatedBy>
+    <Description>A Holiday Listing Service for countries and Date Range</Description>
+    <DisplayName>holidayservice</DisplayName>
+    <LastModifiedAt>1511251694862</LastModifiedAt>
+    <LastModifiedBy>sailendra@yandex.com</LastModifiedBy>
+    <Policies>
+        <Policy>AssignMsgGetAllCountries</Policy>
+        <Policy>AssignMsgHolidayByCountryCode</Policy>
+        <Policy>AssignMsgHolidayByDateRange</Policy>
+        <Policy>AssignMsgHolidayByYear</Policy>
+        <Policy>ExtractHolidayCountryCode</Policy>
+        <Policy>ExtractHolidayDateRange</Policy>
+        <Policy>ExtractHolidayYear</Policy>
+        <Policy>HolidayServiceByDate</Policy>
+        <Policy>HolidayServiceCacheByCountryCode</Policy>
+        <Policy>HolidayServiceCacheByDate</Policy>
+        <Policy>HolidayServiceCacheByYear</Policy>
+        <Policy>HolidayServiceCacheDefault</Policy>
+        <Policy>OuthFlowCallout</Policy>
+        <Policy>PopulateGetHolidayByCountry</Policy>
+        <Policy>PopulateHolidayByCountryYear</Policy>
+        <Policy>PopulatetHolidayByCountry</Policy>
+        <Policy>RaiseFaultFLowCallout</Policy>
+        <Policy>RemovePathSuffix</Policy>
+        <Policy>parseDate</Policy>
+        <Policy>printMessage</Policy>
+        <Policy>printRequestParams</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://ExtractCredentials.js</Resource>
+        <Resource>jsc://RemovePathSuffix.js</Resource>
+        <Resource>jsc://parseDate.js</Resource>
+        <Resource>jsc://printMessage.js</Resource>
+        <Resource>jsc://printRequestParams.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+        <TargetEndpoint>oauth</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

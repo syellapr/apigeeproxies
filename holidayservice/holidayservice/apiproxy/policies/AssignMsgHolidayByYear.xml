@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignMsgHolidayByYear">
+    <DisplayName>AssignMsgHolidayByYear</DisplayName>
+    <Properties/>
+    <Add>
+        <Headers/>
+        <QueryParams/>
+        <FormParams/>
+    </Add>
+    <Set>
+        <Path/>
+        <Payload>
+            <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+                <soap:Body>
+                    <GetHolidaysForYear xmlns="http://www.holidaywebservice.com/HolidayService_v2/">
+                        <countryCode>{countryCode}</countryCode>
+                        <year>{year}</year>
+                    </GetHolidaysForYear>
+                </soap:Body>
+            </soap:Envelope>
+        </Payload>
+    </Set>
+    <AssignVariable>
+        <Name>name</Name>
+        <Value/>
+        <Ref/>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

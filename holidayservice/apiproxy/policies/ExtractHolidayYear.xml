@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="true" enabled="true" name="ExtractHolidayYear">
+    <DisplayName>ExtractHolidayYear</DisplayName>
+    <Source clearPayload="false">request</Source>
+    <JSONPayload>
+        <Variable name="year">
+            <JSONPath>$.year</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

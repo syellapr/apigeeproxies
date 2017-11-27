@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignRequestForLatLng">
+    <DisplayName>AssignRequestForLatLng</DisplayName>
+    <Properties/>
+    <Remove>
+        <QueryParams>
+            <QueryParam name="address"/>
+        </QueryParams>
+    </Remove>
+    <Set>
+        <Verb>GET</Verb>
+    </Set>
+    <AssignTo type="request" createNew="false">target.request</AssignTo>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

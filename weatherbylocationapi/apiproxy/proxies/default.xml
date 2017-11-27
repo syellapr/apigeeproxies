@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>OauthFlowCallout</Name>
+            </Step>
+            <Step>
+                <Name>ExtractAddress</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="googleApiAddress">
+            <Request>
+                <Step>
+                    <Name>GoogleAddressApiCallout</Name>
+                </Step>
+                <Step>
+                    <Name>ExtractLatLng</Name>
+                </Step>
+                <Step>
+                    <Name>printAssignedVariables</Name>
+                </Step>
+                <Step>
+                    <Condition>(latitude == empty or longitude == empty)</Condition>
+                    <Name>RaiseFaultForInvalidAddress</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/weatherbylocationapi</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+        <VirtualHost>default</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

@@ -1,0 +1,17 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "A Holiday Listing Service for countries and Date Range",
+    "version": "1.0.0",
+    "title": "holidayservice",
+    "contact": {
+      "email": "sailendra@yandex.com"
+    }
+  },
+  "host": "syellaprorg-test.apigee.net",
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/holidayservice",
+  "paths": {}
+}

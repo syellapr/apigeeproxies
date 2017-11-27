@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="true" enabled="true" name="ExtractHolidayCountryCode">
+    <DisplayName>ExtractHolidayCountryCode</DisplayName>
+    <Source clearPayload="false">request</Source>
+    <QueryParam name="countryCode">
+        <Pattern>{countryCode}</Pattern>
+    </QueryParam>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

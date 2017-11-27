@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignMsgHolidayByCountryCode">
+    <DisplayName>AssignMsgHolidayByCountryCode</DisplayName>
+    <Set>
+        <Headers>
+            <Header name="Content-Type">text/xml</Header>
+            <Header name="SOAPAction">http://www.holidaywebservice.com/HolidayService_v2/GetHolidaysAvailable</Header>
+        </Headers>
+        <Payload>
+            <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+                <soap:Body>
+                    <GetHolidaysAvailable xmlns="http://www.holidaywebservice.com/HolidayService_v2/">
+                        <countryCode>{countryCode}</countryCode>
+                    </GetHolidaysAvailable>
+                </soap:Body>
+            </soap:Envelope>
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo type="request" createNew="false">target.request</AssignTo>
+</AssignMessage>
